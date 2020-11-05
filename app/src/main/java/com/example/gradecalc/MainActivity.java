@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         Bundle bundle = new Bundle();
         bundle.putDouble("percentOfA", percentOfA);
         bundle.putDouble("percentOfB", percentOfB);
@@ -66,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
         bundle.putDouble("percentOfF", percentOfF);
         mFragmentOne.setArguments(bundle);
         fragmentTransaction.replace(R.id.frameLayout, mFragmentOne);
-
-
 
 
         if (showingFragment==0) {
@@ -79,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
             showingFragment=0;
         }
         fragmentTransaction.commit();
+
+
     }
 
 }
